@@ -1,4 +1,4 @@
-package com.backjoon.loop.multitable;
+package com.loop.multitable;
 
 import java.io.BufferedReader;
 import java.io.IOException;
