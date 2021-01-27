@@ -2,18 +2,17 @@ package codeup100;
 
 import java.util.Scanner;
 
-public class CodeUp1028 {
-	
-	//https://codeup.kr/problem.php?id=1028
+public class CodeUp1053 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
 		
-		String input = sc.nextLine();
-		
-		System.out.println(input);
+		if(input == 1)
+			System.out.println(0);
+		else if(input == 0)
+			System.out.println(1);
 
 	}
 

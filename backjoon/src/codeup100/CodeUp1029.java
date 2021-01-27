@@ -2,9 +2,7 @@ package codeup100;
 
 import java.util.Scanner;
 
-public class CodeUp1028 {
-	
-	//https://codeup.kr/problem.php?id=1028
+public class CodeUp1029 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,7 +11,7 @@ public class CodeUp1028 {
 		
 		String input = sc.nextLine();
 		
-		System.out.println(input);
+		System.out.printf("%.11f", Double.parseDouble(input));
 
 	}
 
