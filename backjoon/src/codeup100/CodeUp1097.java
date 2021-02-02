@@ -81,7 +81,7 @@ public class CodeUp1097 {
 					String str = board[i][j] + " ";
 					sb.append(str);
 				}
-				System.out.println(sb.toString().substring(0, sb.length()-1));
+			System.out.println(sb.toString().substring(0, sb.length()-1));
 			}
 			
 
