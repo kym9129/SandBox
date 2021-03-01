@@ -44,9 +44,7 @@ function calculate(){
 
 function display(){
     var resultarea = document.getElementById("result");
-    console.log(resultarea, resultarea.style.display);
-    // if(resultarea.style.display=='none'){
-        resultarea.style.display = 'block';
-        // alert('뿅!');
-        // }
+    // console.log(resultarea, resultarea.style.display);
+    resultarea.style.display = 'block';
+
 }
