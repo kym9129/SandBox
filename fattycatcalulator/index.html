@@ -5,38 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고양이 체지방률 계산기</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
 </head>
 <body>
-    <h2>고양이 체지방률 계산기</h2>
+    <h1 id="title">고양이 체지방률 계산기</h1>
     <fieldset class ="input">
-        <legend>고양이 체지방률 측정법</legend>
+        <!-- <legend>고양이 체지방률 측정법</legend> -->
         <p>흉곽둘레와 무릎에서 발꿈치까지의 길이(LIM : Leg Index Measurement)를 측정하여 계산</p>
-        <img src="/images/standard.jpeg" alt="">
-        <br>
-        <img src="/images/howto.png" alt="" id="howto">
+        <img src="./images/howto.png" alt="" id="howto">
         <form action="">
         <br>
+        <div id="inputarea">
         <label for="waist">흉곽 둘레 (cm) : </label>
         <input type="text" name="" id="waist" required>
         <br><br>
         <label for="lim">LIM (cm) : </label>
         <input type="text" name="" id="lim" required>
         <br><br>
-        <!-- <button onclick="calculate();">계산하기</button> -->
+        <!-- <input type="submit" value="계산하기" onclick="calculate();"> -->
         <input type="button" value="계산하기" onclick="calculate();">
+    </div>
+        <!-- <button onclick="calculate();">계산하기</button> -->
         </form>
     </fieldset>
     <br>
-    <div class="result">
-
-        <h3>결과</h3>
-        <img src="/images/fatlevel.png" alt="" id= "fatlevel">
-        <br>
-        <span>체지방률 : </span> <span id="fatrate">0</span><span>% 입니다.</span>
+    <div class="result" id="result">
+        <h2>결과</h2>
+        <span>체지방률 : </span> <span class="fatrate" id="fatrate">0</span><span class="fatrate">%</span><span> 입니다.</span>
         <br><br>
         <span>당신의 고양이는 </span> <span id="judge">정상</span><span> 입니다.</span>
+        <br>
+        <img src="./images/fatlevel.png" alt="" id= "fatlevel">
+        <br>
     </div>
 
 </body>

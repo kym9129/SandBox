@@ -1,15 +1,48 @@
-.result{
-    background-color: rgb(255, 238, 235);
-    padding: 10px;
-    width: 800px;
+#title{
+    text-align: center;
 }
+#inputarea{
+    /* background-color: rgb(202, 202, 202); */
+    text-align: left;
+    width: 200px;
+    margin: 0 auto;
+}
+.input{
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+.result{
+    /* background-color: rgb(255, 238, 235); */
+    padding: 10px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    /* display: none; */
+}
+#result{
+    display: none;
+}
+
 h3{
     padding : 0px;
     margin : 0px;
 }
 #fatlevel{
-    height: 400px;
+    width : 400px;
 }
 #howto{
     height:200px;
+}
+.fatrate{
+    font-size: 30px;
+    color: tomato;
+}
+#judge{
+    font-size: 30px;
+    color: tomato;
 }

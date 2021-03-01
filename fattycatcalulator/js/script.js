@@ -1,5 +1,9 @@
 
 function calculate(){
+
+    //결과창 보이게 하기
+    display();
+
     // 사용자 입력값 가져오기=
     // var waist = 38;
     // var lim = 9;
@@ -36,4 +40,13 @@ function calculate(){
         document.getElementById("judge").innerHTML = "저체중";
     }
 
+}
+
+function display(){
+    var resultarea = document.getElementById("result");
+    console.log(resultarea, resultarea.style.display);
+    // if(resultarea.style.display=='none'){
+        resultarea.style.display = 'block';
+        // alert('뿅!');
+        // }
 }
