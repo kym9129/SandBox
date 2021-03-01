@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고양이 체지방률 계산기</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+	<script src="./js/script.js"></script>
 </head>
 <body>
-    <h1 id="title">고양이 체지방률 계산기</h1>
-    <fieldset class ="input">
-        <!-- <legend>고양이 체지방률 측정법</legend> -->
-        <p>흉곽둘레와 무릎에서 발꿈치까지의 길이(LIM : Leg Index Measurement)를 측정하여 계산</p>
-        <img src="./images/howto.png" alt="" id="howto">
-        <form action="">
-        <br>
-        <div id="inputarea">
-        <label for="waist">흉곽 둘레 (cm) : </label>
-        <input type="text" name="" id="waist" required>
-        <br><br>
-        <label for="lim">LIM (cm) : </label>
-        <input type="text" name="" id="lim" required>
-        <br><br>
-        <!-- <input type="submit" value="계산하기" onclick="calculate();"> -->
-        <input type="button" value="계산하기" onclick="calculate();">
-    </div>
-        <!-- <button onclick="calculate();">계산하기</button> -->
-        </form>
-    </fieldset>
-    <br>
-    <div class="result" id="result">
-        <h2>결과</h2>
-        <span>체지방률 : </span> <span class="fatrate" id="fatrate">0</span><span class="fatrate">%</span><span> 입니다.</span>
-        <br><br>
-        <span>당신의 고양이는 </span> <span id="judge">정상</span><span> 입니다.</span>
-        <br>
-        <img src="./images/fatlevel.png" alt="" id= "fatlevel">
-        <br>
-    </div>
-
+	<section class="wrap">
+		<header>
+			<h1 class="title">고양이<br/> 체지방률<br/> 계산기.</h1>
+		<p>흉곽둘레와 무릎에서 발꿈치까지의 길이(LIM)를<br/> 측정하여 입력해주세요!</p>
+		</header>
+		
+		<form>
+			<div class="catbox"></div>
+			<label for="waist">흉곽둘레(cm)</label>
+			<!-- <input type="number" id="round" name="round" class="textinput">		 -->
+			<input type="number" id="waist" name="waist" class="textinput">		
+			
+			<label for="lim">LIM(cm)</label>
+			<input type="number" id="lim" name="lim" class="textinput">		
+			<!-- <input type="submit" value="체지방률 계산하기" class="btm" onclick="calculate();"> -->
+			<input type="button" value="체지방률 계산하기" class="btm" onclick="calculate();">
+		</form>
+	</section>
+	
+	<section class="result" id="result">
+		<p class="resultTitle">당신의 고양이의 체지방률</p>
+		<!-- <p class="resultNum">21% 정상</p> -->
+		<div class="resultNumGroup">
+			<span class="resultNum" id="fatrate">21</span><span class="resultNum">% </span><span class="resultNum" id="judge">정상</span>
+		</div>
+		
+	</section>
+	
+	
 </body>
 </html>

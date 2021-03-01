@@ -1,48 +1,73 @@
-#title{
-    text-align: center;
-}
-#inputarea{
-    /* background-color: rgb(202, 202, 202); */
-    text-align: left;
-    width: 200px;
-    margin: 0 auto;
-}
-.input{
-    background-color: rgb(241, 241, 241);
-    padding: 10px;
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    border: none;
+/*
+
+
+  Author: monging
+  Author URI: http://monging.com
+
+*/
+
+/*===================================================================*/
+/*
+/* CSS RESET 
+/*
+/*===================================================================*/
+
+/************************ basic ************************/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video, header, footer, section, article, nav 
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display:block;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:"";content:none;}
+table {border-collapse: collapse;border-spacing:0;}
+a {color:#333333;text-decoration:none;}
+a:hover {color:#647560;text-decoration:none;}
+
+body {font-family:'Noto Sans KR', sans-serif;webkit-font-smoothing:antialiased;line-height:1.6em;text-rendering:optimizeLegibility;background:#E5E5E5;font-size:.9rem;letter-spacing:0.6;color:#333}
+
+/************************ font ************************/
+
+
+.fontBold {font-weight:700;}
+.clearfix:after {display:block;height:0;visibility:hidden;clear:both;content:'';}
+.pointcolor {color:#008dd3;}
+.underbar {text-decoration:underline;}
+
+h1.title {font-size: 3.125rem;line-height: 104%;margin-bottom:10px}
+
+
+.wrap {width:90%;max-width:460px;background: #fff;margin:0 auto;padding:50px 33px;box-sizing: border-box}
+
+header {margin-bottom:120px}
+form {position:relative}
+.catbox {position: absolute;right:0 ;top:-170px;background:url(../images/cat.png);display: block;width: 196px;height:211px;background-size:cover}
+label, input {display: block;width:100%;padding:0 !important}
+label {margin:10px 0 5px 0}
+input {height: 52px;background: #E5E5E5;border:0 !important;padding-left: 10px !important;box-sizing:border-box;border-radius: 0 !important;border: none; /*removes the default css*/ }
+.btm {width:100% !important;background: #000;color:#fff;margin-top:10px;font-size: 1.3rem;border-radius: 0 !important;border: none; /*removes the default css*/}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none;margin: 0;}
+/* Firefox */
+input[type=number] { -moz-appearance: textfield;}
+
+.result {background-color:#FFF9F9 !important;background: url(../images/bottom.png) no-repeat left bottom;display:none;margin-top:40px;height:calc( 100vh - 664px );width:90%;max-width:460px;margin:0 auto;background-size:100% auto;padding:10% 0;box-sizing:border-box;min-height:300px}
+.result p {margin:0 auto;display: block;text-align:center}
+.resultTitle {font-size: 1.3rem;margin-bottom:20px !important}
+.resultNum {font-size: 3.125rem;line-height: 104%;font-weight:700}
+.resultNumGroup {
+  text-align: center;
 }
 
-.result{
-    /* background-color: rgb(255, 238, 235); */
-    padding: 10px;
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    /* display: none; */
-}
-#result{
-    display: none;
-}
+@media all and (max-width:640px){
+	
+	.wrap {width:100%;max-width:100%;}
+	.result {width:100%;max-width:100%;min-height:256px}
 
-h3{
-    padding : 0px;
-    margin : 0px;
-}
-#fatlevel{
-    width : 400px;
-}
-#howto{
-    height:200px;
-}
-.fatrate{
-    font-size: 30px;
-    color: tomato;
-}
-#judge{
-    font-size: 30px;
-    color: tomato;
+
 }

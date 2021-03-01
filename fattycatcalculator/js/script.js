@@ -44,7 +44,7 @@ function calculate(){
 
 function display(){
     var resultarea = document.getElementById("result");
-    // console.log(resultarea, resultarea.style.display);
+    console.log(resultarea, resultarea.style.display);
     resultarea.style.display = 'block';
 
 }
