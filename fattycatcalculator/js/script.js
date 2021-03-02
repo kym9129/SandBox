@@ -15,6 +15,7 @@ function calculate(){
     //체지방률 계산식
     // var fatrate = ((1.5 * (waist - lim)) - 9);
     var fatrate = (((waist/0.7062) - lim)/0.9156)-lim;
+    fatrate = fatrate.toFixed(1);
 
     //체지방률 화면에 출력
     document.getElementById("fatrate").innerHTML = fatrate;
