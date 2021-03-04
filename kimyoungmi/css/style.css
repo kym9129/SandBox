@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+body{
+    margin: 0px;
+}
+.entire{
+    /* padding: 10px; */
+    width: 1026px;
+    /* background-color: gray; */
+    margin: 0px auto;
+    display: flex;
+    /* padding:10px; */
+}
+h1{
+    margin: 0;
+}
+nav{
+    float: left;
+    padding-top: 168px;
+    background-color: #FC4C57;
+    position: sticky;
+    top:0px;
+    width: 271px;
+    height: 700px;
+    /* left: 72px; */
+    text-align : center;
+    color:white;
+}
+#navSubTitle{
+    margin:0 auto;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+}
+nav>#name{
+    margin:0 auto;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 39px;
+}
+nav>.menu{
+    margin-top: 70px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.contents{
+    float: left;
+    position: relative;
+    width: 732px;
+    /* left: 64px; */
+    /* top: -3433px; */
+    background-color: lightgray;
+}
+
+section{
+    position:relative;
+    height: 767px;
+    background-color: white;
+    border:1px solid lightgray;
+    margin-bottom: 50px;
+    color: black;
+}
+#home>#titleBox{
+    padding-top: 200px;
+    padding-left: 50px;
+}
+#titleBox>img{
+    position:absolute;
+    left: 487px;
+    top: 164px;
+}
+
+#home>#titleBox>h1{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    color: #FC4C57;
+}
+#home>#titleBox>span{
+    font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 26px;
+}
+
+
+
+#roadmap{
+    margin-bottom: 0px;
+}
