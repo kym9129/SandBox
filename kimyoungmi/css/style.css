@@ -71,10 +71,16 @@ section{
     padding-top: 200px;
     padding-left: 50px;
 }
-#titleBox>img{
+#titleBox>#stars{
     position:absolute;
     left: 487px;
     top: 164px;
+}
+#titleBox>#mainImage{
+    width: 527px;
+    height: 422px;
+    padding-left: 151px;
+    padding-top: 27px;
 }
 
 #home>#titleBox>h1{
@@ -92,7 +98,22 @@ font-size: 18px;
 line-height: 26px;
 }
 
+.title{
+left: 66px;
+top: 104px;
 
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: bold;
+font-size: 42px;
+line-height: 61px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #385A64;
+}
 
 #roadmap{
     margin-bottom: 0px;

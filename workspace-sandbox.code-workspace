@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "fattycatcalculator"
+		},
+		{
+			"path": "kimyoungmi"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "kimyoungmi"
+	}
 }
