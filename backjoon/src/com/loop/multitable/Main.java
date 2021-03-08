@@ -20,7 +20,6 @@ public class Main {
 
 
 		try {
-		while(true) {
 			// input
 			BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("1~9 사이의 정수를 입력하세요. > ");
@@ -29,14 +28,11 @@ public class Main {
 			// 잘못 입력했을 경우 다시 입력받기
 			if (N < 1 || N > 9) {
 				System.out.println("잘못 입력하셨습니다.");
-				continue;
 			}
 			
 			// output
 			for (int i = 1; i < 10; i++) {
 				System.out.printf("%d * %d = %d%n", N, i, N * i);
-				break;
-			}
 		}
 			
 		} catch (IOException e) {
