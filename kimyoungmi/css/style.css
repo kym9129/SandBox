@@ -60,20 +60,26 @@ nav>.menu{
 
 section{
     position:relative;
-    height: 767px;
+    /* height: 767px; */
     background-color: white;
     border:1px solid lightgray;
-    margin-bottom: 50px;
+    margin-bottom: 30px; /*전체 섹션 간 거리*/
     color: black;
 }
+/*홈 외의 섹션*/
+.section{
+    padding-left: 66px;
+    padding-top: 104px;
+    height: 700px;
+}
 #home>#titleBox{
-    padding-top: 200px;
+    padding-top: 150px;
     padding-left: 50px;
 }
 #titleBox>#stars{
     position:absolute;
     left: 487px;
-    top: 164px;
+    top: 116px;
 }
 #titleBox>#mainImage{
     width: 527px;
@@ -101,10 +107,7 @@ line-height: 26px;
     margin : 0px;
 }
 
-.section{
-    padding-left: 66px;
-    padding-top: 104px;
-}
+
 
 .title{
 left: 66px;
@@ -128,23 +131,25 @@ color: #385A64;
     height: 0px;
     border: 1px solid #385A64;
 }
-#keywords{
-    height:380px;
+.listDiv{
+    padding:10px;
+    height:350px;
+    text-align: center;
 }
-#about>#keywords>ul{
+#about>.listDiv>ul{
     padding-left : 0px;
 }
-#about>#keywords>ul>li{
+#about>.listDiv>ul>li{
     list-style: none;
     float: left;
-    margin: 100px 100px 0 0;
+    margin: 60px 50px 0 50px;
     text-align: center; 
 }
-#about>#keywords>ul>li>img{
+#about>.listDiv>ul>li>img{
     width: 100px;
     height: 100px;
 }
-#about>#keywords>ul>li>h3{
+#about>.listDiv>ul>li>h3{
     font-family: Noto Sans KR;
     font-style: normal;
     font-weight: 500;
@@ -153,7 +158,7 @@ color: #385A64;
     margin : 10px 0;
     color: #BC3946;
 }
-#about>#keywords>ul>li>p{
+#about>.listDiv>ul>li>p{
     font-family: Noto Sans KR;
 font-style:normal;
 font-weight: 400;
@@ -174,7 +179,128 @@ align-items: center;
 
 color: #FC4C57;
 }
+.particle{
+    margin-top:100px;
+    margin-bottom: 50px;
+}
+.pimage{
+    float:left;
+    width: 232px;
+    height: 159px;
+}
+.pimage:hover{
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.1s;
+}
+.pcontext{
+    float:left;
+    margin-left : 15px;
+}
+.ptitle{
+    margin: 0;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #BC3946;
+}
+.pdesc{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.ppeople{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.pskill{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.loveimg{
+    width: 135px;
+    height: 135px;
+}
+#lovediv>ul{
+    padding: 0px;
+}
+#lovediv>ul>li{
+    list-style: none;
+    float : left;
+    text-align: center;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+#lovediv>ul>li>h3{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    color: #BC3946;
+}
+#lovediv>ul>li>p{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+}
 
 #roadmap{
     margin-bottom: 0px;
+}
+.roadDiv{
+    width: 635px;
+    height: 112px;
+    /* background-color: gray; */
+    margin: 50px 0;
+}
+.roadDiv>img{
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.roadTextbox{
+    margin-left: 20px;
+    width: 492px;
+    float:left;
+}
+.roadTextbox>h3{
+    margin: 0;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+}
+.roadTextbox>p{
+    margin: 0;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #000000;
 }
