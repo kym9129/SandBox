@@ -1,30 +1,20 @@
+
+
 window.onload = function(){
+
+
+    //페이지 로드하면 애니메이션 실행
     animation();
-    // //윈도우의 높이
-    // var winH = window.innerHeight; //766
-
-    // //스크롤 값 (수직 스크롤을 얼마나 했는지. 내릴 수록 값 커짐)
-    // var scrollY = window.scrollY; //0
-
-    // //#roadmap의 top값
-    // //스크롤을 내릴 수록 값이 줄어들고 winH의 탑과 만나면 0이된다
-    // //페이드인 줄 시점 : posFromWinTop - winH < 0
-    // var posFromWinTop = roadmap.getBoundingClientRect().top; //3760
-
-    // //#roadmap의 절대좌표값
-    // var absolutePos = scrollY + posFromWinTop; //3760
-
-    // console.log(winH, scrollY, posFromWinTop, absolutePos);
 
     function animation(){
-        console.log("animation()!");
+        // console.log("animation()!");
         var sections; //섹션 유사배열
         var winH; //윈도우의 높이
         initModule();
 
         //모듈 초기화 함수
         function initModule(){
-            console.log("initModule!");
+            // console.log("initModule!");
             // sections = document.querySelectorAll("section");
             sections = document.querySelectorAll(".text-transitionLeft")
             winH = window.innerHeight;
@@ -33,7 +23,7 @@ window.onload = function(){
 
         //이벤트 핸들러 만드는 함수
         function _addEventHandlers(){
-            console.log("_addEventHandlers!");
+            // console.log("_addEventHandlers!");
             window.addEventListener("scroll", _checkPosition);
             // window.addEventListener("load", _checkPosition);
             window.addEventListener("resize", _checkPosition);
@@ -50,31 +40,32 @@ window.onload = function(){
                 if(!sections[i].classList.contains('active')){
                     //페이드인 줄 시점 : posFromWinTop - winH < 0
                     if(winH > posFromWinTop){
-                        console.log("fade-in!");
+                        // console.log("fade-in!");
                         sections[i].classList.add("active");
                     }
-                    //그럼 페이드 아웃 시점은?
-                    else{
-                        console.log("fade-out!")
-                        sections[i].classList.remove("active");
-                    }
+                    // //그럼 페이드 아웃은 어떻게 하지?
+                    // //다른 홈피들도 안하넹..나도안해!!
+                    // else{
+                    //     console.log("fade-out!")
+                    //     sections[i].classList.remove("active");
+                    // }
                 } 
-
-
             }
         }
 
-        //이거뭐지?
-        // return {
-        //     init: initModule
-        // }
-
-
-
     }
 
+    // //섹션별 위치값
+    // var posHome = document.querySelector('#home').offsetTop;
+    // var posAbout = document.querySelector('#about').offsetTop;
+    // var posProject = document.querySelector('#project').offsetTop;
+    // var posFavorite = document.querySelector('#favorite').offsetTop;
+    // var posRoadmap = document.querySelector('#roadmap').offsetTop;
 
-
+    // function movePage(pos){
+    //     window.scrollTo({top:pos, behavior: 'smooth'});
+    // }
+    
 
 
 

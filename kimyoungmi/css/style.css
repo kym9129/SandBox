@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+html{
+    /* 부드럽게 스크롤 */
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0px;
 }
@@ -48,7 +53,18 @@ nav>.menu{
     font-size: 14px;
     line-height: 20px;
 }
-
+a{
+    text-decoration: none;
+}
+a:link{
+    color:white;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+    color:#FFBBC0;
+}
 .contents{
     float: left;
     position: relative;
