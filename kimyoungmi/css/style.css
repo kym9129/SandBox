@@ -60,17 +60,31 @@ nav>.menu{
 
 section{
     position:relative;
-    /* height: 767px; */
+    height: 760px;
     background-color: white;
     border:1px solid lightgray;
-    margin-bottom: 30px; /*전체 섹션 간 거리*/
+    margin-bottom: 100px; /*전체 섹션 간 거리*/
+    overflow: hidden; /*부모 벗어난건 가리기*/
     color: black;
 }
 /*홈 외의 섹션*/
 .section{
     padding-left: 66px;
     padding-top: 104px;
-    height: 700px;
+    /* height: 700px; */
+}
+.text-transitionLeft{
+    /*요소 왼쪽에 숨겨두기*/
+    transform: translateX(-380px);
+    opacity: 0;
+    transition: all .6s ease-out;
+}
+/* .text-transitionRight{ */
+    /* 요소 오른쪽에 숨겨두기 */
+/* } */
+.active{ /*스크롤하면 원래대로 돌아옴*/
+    transform: translateX(0);
+    opacity: 1;
 }
 #home>#titleBox{
     padding-top: 150px;
