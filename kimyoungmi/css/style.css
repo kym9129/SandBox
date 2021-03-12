@@ -10,7 +10,6 @@ body{
 .entire{
     /* padding: 10px; */
     width: 1026px;
-    /* background-color: gray; */
     margin: 0px auto;
     display: flex;
     /* padding:10px; */
@@ -69,16 +68,12 @@ a:hover{
     float: left;
     position: relative;
     width: 732px;
-    /* left: 64px; */
-    /* top: -3433px; */
-    /* background-color: lightgray; */
 }
 
 section{
     position:relative;
     height: 760px;
     background-color: white;
-    /* border:1px solid lightgray; */
     margin-bottom: 30px; /*전체 섹션 간 거리*/
     overflow: hidden; /*부모 벗어난건 가리기*/
     color: black;
@@ -148,7 +143,6 @@ font-style: normal;
 font-weight: bold;
 font-size: 42px;
 line-height: 61px;
-/* identical to box height */
 
 display: flex;
 align-items: center;
@@ -303,7 +297,6 @@ color: #FC4C57;
 .roadDiv{
     width: 635px;
     height: 112px;
-    /* background-color: gray; */
     margin: 50px 0;
 }
 .roadDiv>img{
