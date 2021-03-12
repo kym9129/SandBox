@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="./css/signup.css?ver=1">
+    <script src="./js/signup.js?ver=1"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <div id="input1234">
+            <input type="text" name="id" id="id" placeholder="아이디"><br>
+            <input type="password" name="pwd" id="pwd" placeholder="비밀번호"><br>
+            <input type="text" name="name" id="name" placeholder="이름"><br>
+            <input type="number" name="phone" id="phone" placeholder="휴대전화번호 ('-'제외)"><br>
+        </div>
+        <div id="bdaybox">
+            <input type="number" name="bday" id="bday" placeholder="생년월일 (yyyymmdd)">
+            <input type="radio" name="gender" id="female">
+            <label for="female">여성</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male">남성</label>
+        </div>
+        <br>
+        <div id="termbox">
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">이용약관 동의</label><br>
+            <input type="checkbox" name="policy" id="policy" required>
+            <label for="policy">개인정보 취급방침 동의</label><br>
+            <input type="checkbox" name="marketing" id="marketing">
+            <label for="marketing">마케팅 정보 수신 동의 (선택)</label>
+        </div>
+        <br>
+        <input type="submit" value="회원가입" id="signupBtn">
+        <p id="back"><a href="./signin.html">이전화면으로 돌아가기</a></p>
+    </div>
+
+
+</body>
+</html>

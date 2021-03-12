@@ -1,0 +1,88 @@
+/* 로그인 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+.wrapper{
+    position:relative;
+    /* border: 1px solid black; */
+    width: 500px;
+    height: 800x;
+    margin: 0 auto;
+    font-family: Noto Sans KR;
+}
+.wrapper>h1{    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    align-items: center;
+    text-align: center;
+    color: #FC4C57;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+#stars{
+    position:absolute;
+    width: 38px;
+    height: 53.91px;
+    top:-20px;
+    left:350px;
+}
+#lorem{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+    margin: 0 auto;
+    width: 361.21px;
+}
+#inputs{
+    width: 400px;
+    margin: 0 auto;
+}
+#id, #pwd{
+    width: 380px;
+    height: 51.13px;
+    border: none;
+    background: #EDEDED;
+    margin-bottom: 10px;
+    padding: 0 0 0 15px;
+    color: #989898;
+}
+#login, #signup{
+    width: 395px;
+    height: 51.13px;
+    padding: 0;
+    border:none;
+    color:#fff;
+    margin-bottom: 10px;
+}
+#login{
+
+    background: #FC4C57;
+
+}
+#signup{
+    background: #989898;
+}
+#back{
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 14px;
+text-align: center;
+color: #989898;
+}
+
+a{
+    text-decoration: none;
+}
+a:link{
+    color:#989898;
+}
+a:visited{
+    color:#989898;
+}
+a:hover{
+    color:#989898;
+}
