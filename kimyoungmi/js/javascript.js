@@ -1,8 +1,6 @@
 
 
 window.onload = function(){
-
-
     //페이지 로드하면 애니메이션 실행
     animation();
 
@@ -43,30 +41,10 @@ window.onload = function(){
                         // console.log("fade-in!");
                         sections[i].classList.add("active");
                     }
-                    // //그럼 페이드 아웃은 어떻게 하지?
-                    // //다른 홈피들도 안하넹..나도안해!!
-                    // else{
-                    //     console.log("fade-out!")
-                    //     sections[i].classList.remove("active");
-                    // }
                 } 
             }
         }
 
     }
-
-    // //섹션별 위치값
-    // var posHome = document.querySelector('#home').offsetTop;
-    // var posAbout = document.querySelector('#about').offsetTop;
-    // var posProject = document.querySelector('#project').offsetTop;
-    // var posFavorite = document.querySelector('#favorite').offsetTop;
-    // var posRoadmap = document.querySelector('#roadmap').offsetTop;
-
-    // function movePage(pos){
-    //     window.scrollTo({top:pos, behavior: 'smooth'});
-    // }
-    
-
-
 
 };

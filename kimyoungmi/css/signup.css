@@ -20,6 +20,18 @@ body{
     color: #FC4C57;
 
 }
+.alert{ 
+    /* 유효성검사 안내 영역 */
+    /* 유효성검사에 걸릴 때만 출력 */
+    width: 380px;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+}
+#input1234{
+    width: 395px;
+    margin: 0 auto;
+}
 #input1234>input{
     width: 380px;
     height: 51.13px;
@@ -41,7 +53,7 @@ body{
     border: none;
     background: #EDEDED;
     margin-bottom: 10px;
-    padding: 0 0 0 15px;
+    padding: 0 15px;
     color: #989898;
 }
 #bdaybox>label{

@@ -9,19 +9,23 @@
     <script src="./js/signup.js?ver=1"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <form action="./signin.html" class="wrapper" onsubmit="return submitForm();">
         <h1>Sign Up</h1>
         <div id="input1234">
-            <input type="text" name="id" id="id" placeholder="아이디"><br>
-            <input type="password" name="pwd" id="pwd" placeholder="비밀번호"><br>
-            <input type="text" name="name" id="name" placeholder="이름"><br>
-            <input type="number" name="phone" id="phone" placeholder="휴대전화번호 ('-'제외)"><br>
+            <p class="alert" id="alertId"></p>
+            <input type="text" name="id" id="id" placeholder="아이디 (영문+숫자 4~12자리. 영문으로 시작)" required><br>
+            <p class="alert" id="alertPwd"></p>
+            <input type="password" name="pwd" id="pwd" placeholder="비밀번호 (영문+숫자+특수문자 4~12자리)" required><br>
+            <p class="alert" id="alertName"></p>
+            <input type="text" name="name" id="userName" placeholder="이름 (한글 2글자 이상)" required><br>
+            <p class="alert" id="alertPhone"></p>
+            <input type="number" name="phone" id="phone" placeholder="휴대전화번호 ('-'제외)" required><br>
         </div>
         <div id="bdaybox">
-            <input type="number" name="bday" id="bday" placeholder="생년월일 (yyyymmdd)">
-            <input type="radio" name="gender" id="female">
+            <input type="date" name="bday" id="bday" required>
+            <input type="radio" name="gender" id="female" value="female" required>
             <label for="female">여성</label>
-            <input type="radio" name="gender" id="male">
+            <input type="radio" name="gender" id="male" value="male">
             <label for="male">남성</label>
         </div>
         <br>
@@ -32,9 +36,13 @@
             <label for="policy">개인정보 취급방침 동의</label><br>
             <input type="checkbox" name="marketing" id="marketing">
             <label for="marketing">마케팅 정보 수신 동의 (선택)</label>
-        </div>
-        <br>
+    </form>
+    <!-- <div class="wrapper">
+
+    </div> -->
+        <br><br>
         <input type="submit" value="회원가입" id="signupBtn">
+        <!-- <input type="button" value="회원가입" id="signupBtn"> -->
         <p id="back"><a href="./signin.html">이전화면으로 돌아가기</a></p>
     </div>
 
