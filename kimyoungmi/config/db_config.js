@@ -4,6 +4,6 @@ module.exports = (function(){
         port : 10312,
         user: "root",
         password : "1234",
-        database: "SandBox"
+        database: "sandbox"
     }
 })();
