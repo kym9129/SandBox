@@ -1,4 +1,4 @@
-const mariadb = require('mariadb');
+const mariadb = require('mysql');
 var config = require('./db_config');
 
 const pool = mariadb.createPool({
