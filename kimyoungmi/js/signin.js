@@ -11,6 +11,7 @@ function login(){
     var memberArr = [];
     for(var i = 0; i < localStorage.length; i++){
         memberArr.push(localStorage.getItem(i).split(","));
+        console.log(memberArr);
     }
     
     //id pw 판정
