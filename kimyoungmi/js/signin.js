@@ -27,6 +27,6 @@ function login(){
         }
     }
     //memberArr[i]안에 맞는 id/pwd가 없을 경우
-    console.log("로그인 실패!");
-    // alert("아이디와 비밀번호가 일치하지 않습니다."); 
+    // console.log("로그인 실패!");
+    alert("아이디와 비밀번호가 일치하지 않습니다."); 
 }
