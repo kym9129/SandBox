@@ -74,29 +74,41 @@ window.onload = function(){
     }
 };
 
+//멤버 객체 생성자
+// function Member(id, pwd, userName, phone, bday, gender, marketing){
+//     this.id = id;
+//     this.pwd = pwd;
+//     this.userName = userName;
+//     this.phone = phone;
+//     this.bday = bday;
+//     this.gender = gender;
+//     this.marketing = marketing;
+// }
+
+//멤버 배열
+var member = [];
+
+
 //회원가입 버튼 누를 시 (제출 시)
 function submitForm(){
     // console.log("submit pressed!");
    //모든 검사 통과 시
     if(idChecked && pwdChecked && nameChecked && phoneChecked){
-        // * WebStorage에 정보담기
+       
+        //mem배열에 회원정보 담기
         var gender = document.querySelector("[name=gender]");
-        localStorage.setItem("id", id.value);
-        localStorage.setItem("pwd", pwd.value);
-        localStorage.setItem("userName", userName.value);
-        localStorage.setItem("phone", phone.value);
-        localStorage.setItem("bday", bday.value);
-        localStorage.setItem("gender", gender.value);
-        localStorage.setItem("marketing", marketing.checked); //마케팅수신동의 여부
-
-        console.log("----가입정보------");
-        console.log(localStorage.getItem("id"));
-        console.log(localStorage.getItem("pwd"));
-        console.log(localStorage.getItem("userName"));
-        console.log(localStorage.getItem("phone"));
-        console.log(localStorage.getItem("bday"));
-        console.log(localStorage.getItem("gender"));
-        console.log(localStorage.getItem("marketing"));
+        member.push(id.value);
+        member.push(pwd.value);
+        member.push(userName.value);
+        member.push(phone.value);
+        member.push(bday.value);
+        member.push(gender.value);
+        member.push(marketing.checked);
+        
+        //local storage에 회원정보 추가. key: index, value: array
+        var idx = localStorage.length;
+        localStorage.setItem(idx, member);
+        
 
         // * 회원가입완료 팝업알림
         console.log("submit complete!");

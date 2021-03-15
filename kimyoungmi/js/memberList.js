@@ -1,20 +1,25 @@
-console.log("----가입정보------");
-console.log(localStorage.getItem("id"));
-console.log(localStorage.getItem("pwd"));
-console.log(localStorage.getItem("userName"));
-console.log(localStorage.getItem("phone"));
-console.log(localStorage.getItem("bday"));
-console.log(localStorage.getItem("gender"));
-console.log(localStorage.getItem("marketing"));
+//value값인 배열을 다시 배열로 받는다. (회원정보배열을 담은 배열)
+var memberArr = [];
+for(var i = 0; i < localStorage.length; i++){
+    memberArr.push(localStorage.getItem(i).split(","));
+    // console.log(memberArr[i]);
+}
 
 window.onload = function(){
-    var rows = document.querySelectorAll("tr>td");
+    //table하위에 tr생성
+    for(var j = 0; j < memberArr.length; j++){
+        var table = document.querySelector("table");
+        var tr = document.createElement("tr");
+        table.appendChild(tr);
 
-    rows[0].innerHTML = localStorage.getItem("id");
-    rows[1].innerHTML = localStorage.getItem("pwd");
-    rows[2].innerHTML = localStorage.getItem("userName");
-    rows[3].innerHTML = localStorage.getItem("phone");
-    rows[4].innerHTML = localStorage.getItem("bday");
-    rows[5].innerHTML = localStorage.getItem("gender");
-    rows[6].innerHTML = localStorage.getItem("marketing");
+        //tr하위에 td생성 및 회원정보 삽입
+        for(var i = 0; i < memberArr[0].length; i++){
+            //td Node
+            var td = document.createElement("td");
+            //text Node
+            var textnode = document.createTextNode(memberArr[j][i]);
+            tr.appendChild(td);
+            td.appendChild(textnode);
+        }
+    }
 };
