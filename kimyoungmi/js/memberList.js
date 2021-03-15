@@ -1,5 +1,6 @@
 //value값인 배열을 다시 배열로 받는다. (회원정보배열을 담은 배열)
 var memberArr = [];
+console.log(localStorage);
 for(var i = 0; i < localStorage.length; i++){
     memberArr.push(localStorage.getItem(i).split(","));
     // console.log(memberArr[i]);
