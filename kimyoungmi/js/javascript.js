@@ -14,7 +14,7 @@ window.onload = function(){
         //이벤트 핸들러 만드는 함수
         function _addEventHandlers(){
             window.addEventListener("scroll", _checkPosition);
-            window.addEventListener("resize", _checkPosition);
+            window.addEventListener("resize", initModule);
         }
 
         //포지션 체크 함수
