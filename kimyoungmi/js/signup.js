@@ -9,7 +9,6 @@ var nameChecked = false;
 var phoneChecked = false;
 
 window.onload = function(){
-
     //id 검사 : 영문대소문자숫자 4~12자리
     id.addEventListener('keyup', checkId);
     function checkId(){
@@ -74,44 +73,37 @@ window.onload = function(){
     }
 };
 
-//멤버 객체 생성자
-// function Member(id, pwd, userName, phone, bday, gender, marketing){
-//     this.id = id;
-//     this.pwd = pwd;
-//     this.userName = userName;
-//     this.phone = phone;
-//     this.bday = bday;
-//     this.gender = gender;
-//     this.marketing = marketing;
-// }
-
-//멤버 배열
-var member = [];
-
-
 //회원가입 버튼 누를 시 (제출 시)
 function submitForm(){
-    // console.log("submit pressed!");
-   //모든 검사 통과 시
+    //모든 검사 통과 시
     if(idChecked && pwdChecked && nameChecked && phoneChecked){
-       
-        //mem배열에 회원정보 담기
-        var gender = document.querySelector("[name=gender]");
-        member.push(id.value);
-        member.push(pwd.value);
-        member.push(userName.value);
-        member.push(phone.value);
-        member.push(bday.value);
-        member.push(gender.value);
-        member.push(marketing.checked);
         
-        //local storage에 회원정보 추가. key: index, value: array
-        var idx = localStorage.length;
-        localStorage.setItem(idx, member);
-        
+        //members 객체배열 생성 or localStorage에서 불러오기
+        var members = JSON.parse(localStorage.getItem("members")) || [];
+
+        //member값 담을 객체 생성자
+        function Member(id, pwd, userName, phone, bday, gender, marketing){
+            this.id = id;
+            this.pwd = pwd;
+            this.userName = userName;
+            this.phone = phone;
+            this.bday = bday;
+            this.gender = gender;
+            this.marketing = marketing;
+        }
+
+        //member Object 생성
+        var gender = document.querySelector("[name=gender]:checked");
+        var memberObj = new Member(id.value, pwd.value, userName.value, phone.value, bday.value, gender.value, marketing.checked);
+
+        //members 객체배열에 회원객체 담기
+        members.push(memberObj);
+
+        //localStorage에 members객체배열을 JSON형태로 저장
+        localStorage.setItem("members", JSON.stringify(members));      
 
         // * 회원가입완료 팝업알림
-        console.log("submit complete!");
+        // console.log("submit complete!");
         alert("회원가입 완료! 로그인 화면으로 이동합니다.");
         return true;
         // return false;

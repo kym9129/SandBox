@@ -1,26 +1,31 @@
-//value값인 배열을 다시 배열로 받는다. (회원정보배열을 담은 배열)
-var memberArr = [];
-console.log(localStorage);
-for(var i = 0; i < localStorage.length; i++){
-    memberArr.push(localStorage.getItem(i).split(","));
-    // console.log(memberArr[i]);
-}
-
 window.onload = function(){
+    //회원정보 가져오기
+    var members = JSON.parse(localStorage.getItem("members")) || [];
+    
     //table하위에 tr생성
-    for(var j = 0; j < memberArr.length; j++){
+    for(var j = 0; j < members.length; j++){
+        //tr추가
         var table = document.querySelector("table");
         var tr = document.createElement("tr");
         table.appendChild(tr);
+        
+        //td내용삽입 : No.행
+        insertTable(tr, j);
 
-        //tr하위에 td생성 및 회원정보 삽입
-        for(var i = 0; i < memberArr[0].length; i++){
-            //td Node
-            var td = document.createElement("td");
-            //text Node
-            var textnode = document.createTextNode(memberArr[j][i]);
-            tr.appendChild(td);
-            td.appendChild(textnode);
+        //td내용삽입 : 각 속성 행
+        for(var i in members[j]){
+            insertTable(tr, members[j][i]);
         }
     }
 };
+
+function insertTable(tr, text){
+    //td element, node 생성
+    var td = document.createElement("td");
+    var textNode = document.createTextNode(text);
+
+    //tr에 td자식추가
+    tr.appendChild(td);
+    //td에 텍스트노드 추가
+    td.appendChild(textNode);
+}

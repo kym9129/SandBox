@@ -68,6 +68,7 @@ a:hover{
     float: left;
     position: relative;
     width: 732px;
+    /* background-color: lightgray; */
 }
 
 section{
@@ -81,7 +82,7 @@ section{
 /*홈 외의 섹션*/
 .section{
     padding-left: 66px;
-    padding-top: 104px;
+    padding-top: 80px;
     /* height: 700px; */
 }
 .text-transitionLeft{
@@ -204,7 +205,7 @@ align-items: center;
 color: #FC4C57;
 }
 .particle{
-    margin-top:100px;
+    margin-top:50px;
     margin-bottom: 50px;
 }
 .pimage{

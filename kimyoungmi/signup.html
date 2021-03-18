@@ -9,7 +9,7 @@
     <script src="./js/signup.js?ver=1"></script>
 </head>
 <body>
-    <form action="./signin.html" class="wrapper" onsubmit="return submitForm();">
+    <form action="./signin.html" class="wrapper" onsubmit="return submitForm();" id="frm">
         <h1>Sign Up</h1>
         <div id="input1234">
             <p class="alert" id="alertId"></p>
@@ -23,9 +23,9 @@
         </div>
         <div id="bdaybox">
             <input type="date" name="bday" id="bday" required>
-            <input type="radio" name="gender" id="female" value="female" required>
+            <input type="radio" name="gender" id="gender-male" value="female" required>
             <label for="female">여성</label>
-            <input type="radio" name="gender" id="male" value="male">
+            <input type="radio" name="gender" id="gender-female" value="male">
             <label for="male">남성</label>
         </div>
         <br>

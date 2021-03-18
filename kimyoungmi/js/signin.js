@@ -1,32 +1,26 @@
 /**
  * 로그인
  */
-// localStorage.removeItem("honggd");
-// console.log(localStorage);
-
-
-
 function login(){
-    //value값인 배열을 다시 배열로 받는다. (회원정보배열을 담은 배열)
-    var memberArr = [];
-    for(var i = 0; i < localStorage.length; i++){
-        memberArr.push(localStorage.getItem(i).split(","));
-        console.log(memberArr);
-    }
+    //localStorage에서 members객체배열을 불러오기
+    //JSON형태의 데이터를 파싱해서 객체배열로 가져온다
+    var members = JSON.parse(localStorage.getItem("members"));
+    var isMember = false;
     
-    //id pw 판정
-    for(var i = 0; i < memberArr.length; i++){
-        if(id.value == memberArr[i][0] && pwd.value == memberArr[i][1]){
+    //id pw판정
+    for(var i = 0; i < members.length; i++){
+        if(id.value == members[i]["id"] && pwd.value == members[i]["pwd"]){
             alert("로그인 성공! 환영합니다.");
             window.open("./memberList.html", "");
+            isMember = true;
             break;
         }
         else{
-            // console.log("continue");
+            console.log("continue");
             continue;
         }
     }
-    //memberArr[i]안에 맞는 id/pwd가 없을 경우
-    // console.log("로그인 실패!");
-    alert("아이디와 비밀번호가 일치하지 않습니다."); 
+    if(!isMember){
+        alert("아이디와 비밀번호가 일치하지 않습니다."); 
+    }
 }
